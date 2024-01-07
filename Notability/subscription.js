@@ -25,6 +25,6 @@ if(response_body["data"]["processAppleReceipt"]) {
     }
   };
 }
-console.log(response_body)
 var body = JSON.stringify(response_body);
+console.log(body)
 $done(body);
