@@ -1,6 +1,6 @@
-var request_body = JSON.parse($reqeust.body);
-if(request_body["operationName"] === "processAppleReceipt") {
-  var res = {
+var response_body = JSON.parse($response.body);
+if(response_body["data"]["processAppleReceipt"] !== undefined) {
+  response_body = {
     "data": {
       "processAppleReceipt": {
         "error": 0,
@@ -24,10 +24,7 @@ if(request_body["operationName"] === "processAppleReceipt") {
       }
     }
   };
-  var body = JSON.stringify(res);
-  console.log(res)
-  $done(body);
-} else {
-  $done($response.body);
 }
-
+console.log(response_body)
+var body = JSON.stringify(response_body);
+$done(body);
