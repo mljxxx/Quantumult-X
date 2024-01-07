@@ -1,5 +1,5 @@
 var response_body = JSON.parse($response.body);
-if(response_body["data"]["processAppleReceipt"] !== undefined) {
+if(response_body["data"]["processAppleReceipt"]) {
   response_body = {
     "data": {
       "processAppleReceipt": {
