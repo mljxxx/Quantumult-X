@@ -1,10 +1,9 @@
 var body = $response.body;
 var res = JSON.parse(body);
 var rooms = res["rooms"]
-console.log(rooms)
+// console.log(rooms)
 for(room in rooms) {
-    room["memberOnly"] = false
-    console.log(room["id"])
+    console.log(JSON.stringify(room));
     // if(room["id"] === 11330404015) {
     //     console.log(room)
     // }
