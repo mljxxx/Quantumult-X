@@ -1,6 +1,7 @@
 var body = $response.body;
 var res = JSON.parse(body);
 var rooms = res["rooms"]
+console.log(rooms)
 for(room in rooms) {
     room["memberOnly"] = false
     console.log(room["id"])
