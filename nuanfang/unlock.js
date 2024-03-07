@@ -5,5 +5,6 @@ for(room of rooms) {
    room["memberOnly"] = false
 }
 var body = JSON.stringify(res);
-console.log(body);
+// console.log(body);
+console.log("unlock finished");
 $done(body);
